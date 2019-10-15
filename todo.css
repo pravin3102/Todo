@@ -1,0 +1,463 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+.navHeader {
+    display: -webkit-inline-box;
+}
+
+.navHeader .option-icon {
+    color:  #ffffff;
+}
+
+.header {
+    background-color: #0178D7;
+    height: 48px;
+    width: 100%;
+}
+
+.toDoSearchBox {
+    width: 1200px;
+    height: 48px;
+}
+
+.searchToolbar {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(244,246,255,0.8);
+    margin: 8px auto;
+    height: 32px;
+    border-radius: 2px;
+}
+
+.searchToolbar input {
+    background: transparent;
+    border:none;
+}
+body {
+    margin: 0;
+    padding: 0;
+}  
+
+.leftColumn {
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    width: 50px;
+    transition: width 180ms ease;
+    border-right: 1px solid #eaeaea;
+  }
+
+.open-leftcolumn {
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    transition: width 180ms ease;
+    border-right: 1px solid #eaeaea;
+    width: 290px;
+}
+.menuIcon-btn {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menuIcon-btn:hover {
+    background: #005A9E;
+}
+.menuIcon {
+    width: 16px;
+}  
+
+.todo-link{
+    height: 48px;
+    padding: 0px 12px 0px 8px;
+    color: white;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.span-todo {
+    font-weight: bold;
+    font-weight: 600;
+    font-family: SegoeUI-SemiBold-final,Segoe UI Semibold,SegoeUI-Regular-final,Segoe UI,"Segoe UI Web (West European)",Segoe,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    height: 48px;
+    margin-top: 12px;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.sidebar-header-btn {
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.1s;
+}
+
+.sidebar-header-btn:hover {
+    background: #FAFAFA;
+}
+.sidebar-header .fontIcon {
+    color: #465efc;
+}
+
+.ms-Icon {
+    display: inline-block;
+    font-family: 'wundercon';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+}
+
+.iconSize-24 {
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    padding-top: 1px;
+}    
+
+.sidebar-content .homeIcon {
+    color: #465efc;
+}
+.sidebar-content .contactIcon {
+    color: #5ca52d;
+}
+
+.sidebar-content .addIcon {
+    color: #465efc;
+}
+
+nav {
+    height: 207px;
+}
+
+.unordered-list {
+    height: 198px;
+    padding-top: 8px;
+}
+
+.listItem {
+    height: 36px;
+    position: relative;
+}
+
+.listItem:hover {
+    background: #FAFAFA;
+}
+
+.listItem.active {
+    background: #EDEDED;
+}
+
+.todoHelp {
+    height: 100%;
+    line-height: 48px;
+    display: flex;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+}
+
+.tasksToolbar {
+    height: auto;
+    display: block;
+    padding: 12px 16px 0 20px;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.listItem .listItem-title {
+    color: #34373d;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 0 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listItem .listItem-inner {
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 36px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.sidebar-addList {
+    flex-shrink: 0;
+    z-index: 1;
+    display: flex;
+}
+
+.baseAdd.addList {
+    color: #465efc;
+    height: 48px;
+    font-size: 1.4rem;
+    padding: 0 8px;
+    height: 36px;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+
+.baseAdd.addList:hover {
+    background: #FAFAFA;
+}
+
+[type=text].chromeless {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 6px 9px 8px;
+    font-family: "Segoe","Segoe UI","Arial","sans-serif";
+}
+
+.tasks {
+    width:100%;
+}
+
+.listTitle {
+    color: #3e69e4;
+}
+
+.backgroundLines {
+    margin: 0 24px;
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(180deg, white, white 52px, #e5e5e5 52px, #e5e5e5 52px);
+    background-size: 100% 53px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.baseAdd.addTask {
+    box-shadow: 0 0px 0 0px #e5e5e5;
+    margin: 0 8px;
+    padding: 0 12px;
+}
+
+.baseAdd {
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.baseAdd .baseAdd-icon {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.baseAdd.addTask .baseAdd-input {
+    padding: 16px 12px;
+}
+
+form {
+    overflow: hidden;
+}
+
+.ms-Icon--BulletedList2:before {
+    color: #2e5cdb;
+}
+
+.todo-list {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+.taskItem-body {
+    min-height: 52px;
+    align-items: center;
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-word;
+    padding: 0 12px;
+    box-shadow: 0 17px 0 -16px #e5e5e5;
+    flex-wrap: wrap;
+    margin: 0 8px;
+}
+
+.addStep {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.section-icon {
+    margin: 0 4px;
+    fill: #767678;
+    color: #767678;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.right-col{
+    float:right;
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    font-size: 14px;
+    display: block;
+    transition: .5s;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+.text-center{
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+ul {
+    cursor: pointer;
+}
+
+.ms-Icon--Add-step{
+    font-size:12px;
+}
+
+.sub-task-detail {
+    z-index: 10;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 0;
+    padding: 0 10px 2px 10px;
+}
+
+.my-day-box{
+    z-index: 5;
+    position: relative;
+    background: white;
+    margin: 10px 0;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+.my-day-box:hover{
+    color: #000000;
+    background-color: #F5F5F5;
+}
+
+.mt-10 {
+    margin-top:10px;
+}
+
+.pad-l-10 {
+    padding-left: 10px;
+} 
+ 
+.add-notes-box{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    border:none;
+    resize: none;
+    overflow: auto;
+    outline: none;
+    background-color: transparent;
+}
+.right-nav-footer{
+    background: #F5F5F5;
+    position: absolute;
+    display: flex;
+    height:40px;
+    bottom: 70px;
+    width: 337px;
+}
+
+.right-nav-footer-element{
+    font-size:16px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+#created-date{
+    width: fit-content;
+    padding: 0px 115px;
+    text-align: center;
+}
+
+.details {
+    height: 100%;
+    position: relative;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 360px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.step-title {
+    padding: 6px 0;
+    flex: 1 1 0px;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+}
+
+.details .details-body {
+    overflow: auto;
+    margin-top: 10px;
+    padding: 0 10px 16px 10px;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+.taskItem-titleWrapper {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #34373d;
+    cursor: default;
+    position: relative;
+    flex: 1 1 0px;
+    min-height: 52px;
+    padding: 8px 12px;
+    line-height: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}

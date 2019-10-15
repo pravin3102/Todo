@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <link  rel = "stylesheet" type="text/css" href="todo.css">
+        <link  rel = "stylesheet" type="text/css" href="microsoft.css">
+        <link rel="shortcut icon" href="preview.png" />
+        <title>TODO</title>
+    </head>
+    <body>
+        <div class="container">
+        <div class="header">
+            <div class="navHeader">
+                <button class="menuIcon-btn">
+                <span>
+                <img class = "menuIcon " src="menu.svg"/>
+                </span>
+                </button>
+            </div>
+            <div class="navHeader">
+                <a href="#" class ="todo-link" >
+                <span class="span-todo">To Do</span>
+                </a>
+                <div class="toDoSearchBox">
+                    <button class="searchToolbar">
+                    <span><i class="icon fontIcon ms-Icon ms-Icon--Search iconSize-24" aria-hidden="true"></i></span>
+                    <input type = "search" placeholder = "search"> </input>
+                    </button>
+                </div>
+            </div>
+            <div class="navHeader">
+                <button class="menuIcon-btn">
+                <span><i class="ms-Icon ms-Icon--Settings iconSize-24 option-icon"></i></span>
+                </button>
+            </div>
+            <div class="navHeader">
+                <button class="menuIcon-btn">
+                <span>
+                <img class = "menuIcon " src="icons8-question-mark-16.png"/>
+                </span>
+                </button>
+            </div>
+            <div class="navHeader">
+                <button class="menuIcon-btn">
+                <span><i class="icon fontIcon ms-Icon ms-Icon--Megaphone iconSize-24 option-icon"></i></i></span>
+                </button>
+            </div>
+        </div>
+        <div class="main">
+        <div id="toggle" class="leftcolumn">
+            <div class="sidebar-header">
+                <button onclick="toggleSidebar('toggle')" class="sidebar-header-btn">
+                <i class="icon fontIcon ms-Icon ms-Icon--GlobalNavButton iconSize-24" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <nav>
+                    <ul class="unordered-list ms-FocusZone css-37 lists">
+                        <div>
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItem-Inner">
+                                        <span><i class="icon fontIcon ms-Icon ms-Icon--Sunny iconSize-24" aria-hidden="true"></i></span>
+                                        <span class="listItem-title">My Day</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItem-Inner">
+                                        <span><i class="icon fontIcon ms-Icon ms-Icon--FavoriteStar iconSize-24" aria-hidden="true"></i></span>
+                                        <span class="listItem-title">Important</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <div class="listItem active">
+                                    <div class="listItem-Inner">
+                                        <span><i class="icon fontIcon ms-Icon ms-Icon--Calendar iconSize-24" aria-hidden="true"></i></span>
+                                        <span class="listItem-title">Planned</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItem-Inner">
+                                        <span><i class="icon fontIcon ms-Icon ms-Icon--Contact iconSize-24 contactIcon" aria-hidden="true"></i></span>
+                                        <span class="listItem-title">Assigned to Me</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                <div class="listItem">
+                                    <div class="listItem-Inner">
+                                        <span><i class="icon fontIcon ms-Icon ms-Icon--Home iconSize-24 homeIcon" aria-hidden="true"></i></span>
+                                        <span class="listItem-title">Tasks</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+                <ul class="baseAdd-input chromeless " id = "list"></ul>
+                <div class="sidebar-addlist">
+                    <div class="baseAdd addList" onclick="taskMenu('toggle')">
+                        <button class="baseAdd-icon">
+                        <span><i class="icon fontIcon ms-Icon ms-Icon--Add iconSize-24 addIcon" aria-hidden="true"></i></span>
+                        </button>
+                        <input class="baseAdd-input chromeless " id="task" type="text" maxlength="255" placeholder="New list" tabindex="-1" value=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasks" >
+            <div class ="right-col" id="add-step">
+                <div class="details">
+                    <div class="details-body">
+                        <div class="sub-task-detail">
+                            <div class="task-header text-center ">
+                                <span class="pad-l-10">
+                                <input type="text" id="sub-task-list"/>
+                                </span>
+                            </div>
+                            <ul id="step-list"></ul>
+                            <div class="baseAdd addStep" id="">
+                                
+                                <button class="baseAdd-icon">
+                                <i class="icon fontIcon ms-Icon ms-Icon--Add ms-Icon--Add-step iconSize-24 pad-l-10"
+                                    onclick="focusStepInput()"></i>
+                                </button>
+                                <input id="step-add" type="text"/>
+                                <span class = "id-visible" id = "subtask-title-id" hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="my-day-box mt-10 section-icon">
+                            <i class="icon fontIcon ms-Icon ms-Icon--Sunny iconSize-24 pad-l-10"></i>
+                            <div class="pad-l-10 text-center">Add to My Day</div>
+                        </div>
+                        <div class="mt-10">
+                            <div class="my-day-box section-icon" >
+                                <i class="icon fontIcon ms-Icon ms-Icon--AlarmClock iconSize-24 pad-l-10"></i>
+                                <div class="pad-l-10 text-center">Remind me</div>
+                            </div>
+                            <div class="my-day-box section-icon">
+                                <i class="icon fontIcon ms-Icon ms-Icon--Calendar iconSize-24 pad-l-10"></i>
+                                <div class="pad-l-10 text-center">Add due date</div>
+                            </div>
+                            <div class="my-day-box dis-flex section-icon">
+                                <i class="icon fontIcon ms-Icon ms-Icon--RecurringEvent iconSize-24 pad-l-10"></i>
+                                <div class="pad-l-10 text-center">Repeat</div>
+                            </div>
+                        </div>
+                        <div class="my-day-box mt-10 section-icon">
+                            <i class="icon fontIcon ms-Icon ms-Icon--Attach iconSize-24 pad-l-10"></i>
+                            <div class="pad-l-10 text-center">Add file</div>
+                        </div>
+                        <div class="my-day-box mt-10 section-icon">
+                            <textarea class="add-notes-box" placeholder="Add notes" maxlength="255"></textarea>
+                        </div>
+                        <div class="right-nav-footer">
+                            <i class="icon fontIcon ms-Icon ms-Icon--ClosePane iconSize-24 right-nav-footer-element" onclick="closeRightNav()"></i>
+                            <div id="created-date" class="right-nav-footer-element"></div>
+                            <i class="icon fontIcon ms-Icon ms-Icon--Delete iconSize-24 right-nav-footer-element"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasksToolbar">
+                <h2 class="listTitle">
+                    <span id="task-title">Tasks</span>
+                    <span id="task-title-id" hidden="true"></span>
+                </h2>
+            </div>
+            <div>
+                <ul class="taskItem-body" id="sub-task">
+                </ul>
+            </div>
+            <div class="baseAdd addTask">
+                <button class="baseAdd-icon" type="button">
+                <i class="icon fontIcon ms-Icon ms-Icon--Add iconSize-24" aria-hidden="true"></i>
+                </button>
+                <label for="baseAddInput-addTask" class="hidden">Add task</label>
+                <input  class="baseAdd-input chromeless" id ="subinput" type="text" maxlength="255" placeholder="Add task" tabindex="-1" value="">
+            </div>
+            <div class="backgroundLines">
+            </div>
+        </div>
+        <script src="Todo.js"></script>
+    </body>
+</html>
